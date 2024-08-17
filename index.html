@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="./css/main.css" />
+
+		<title>Frontend Mentor | Tip calculator app</title>
+	</head>
+	<body>
+		<h2 class="logo"><img src="./images/logo.svg" alt="Logo Splitter" /></h2>
+
+		<div class="bill-box">
+			<div class="bill-area">
+				<label for="bill-value" class="bill-box__heading">Bill</label>
+				<input type="text" name="bill-value" placeholder="0" class="bill-area__bill-value-input bill-box__input" id="bill-value" />
+			</div>
+
+			<div class="select-tip-area">
+				<p class="bill-box__heading select-tip-area__heading">Select Tip %</p>
+
+				<div class="select-tip-area__btns">
+					<button class="select-tip-area__tip-value-btn">5%</button>
+					<button class="select-tip-area__tip-value-btn">10%</button>
+					<button class="select-tip-area__tip-value-btn">15%</button>
+					<button class="select-tip-area__tip-value-btn">25%</button>
+					<button class="select-tip-area__tip-value-btn">50%</button>
+					<input type="text" placeholder="Custom" class="select-tip-area__tip-value-input" id="custom-tip" />
+				</div>
+			</div>
+
+			<div class="num-people-area">
+				<span class="num-people-area__error">Can't be zero</span>
+				<label for="number-of-people" class="bill-box__heading">Number of People</label>
+				<input type="text" name="number-of-people" placeholder="0" class="num-people-area__num-people-input bill-box__input" id="number-of-people" />
+			</div>
+
+			<div class="final-value-area">
+				<div class="final-value-area__tip-amount">
+					<h3 class="final-value-area__heading">Tip Amount<br /><span class="final-value-area__per-person">/ person</span></h3>
+
+					<p class="final-value-area__value">$<span id="tip-amount">0.00</span></p>
+				</div>
+
+				<div class="final-value-area__total">
+					<h3 class="final-value-area__heading">Total<br /><span class="final-value-area__per-person">/ person</span></h3>
+
+					<p class="final-value-area__value">$<span id="total-per-person">0.00</span></p>
+				</div>
+
+				<button class="final-value-area__btn" id="reset-btn">Reset</button>
+			</div>
+		</div>
+
+		<script src="./js/script.js"></script>
+	</body>
+</html>
