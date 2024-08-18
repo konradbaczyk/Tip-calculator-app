@@ -20,33 +20,45 @@
 		<div class="bill-box">
 			<div class="bill-area">
 				<label for="bill-value" class="bill-box__heading">Bill</label>
-				<input type="text" name="bill-value" placeholder="0" class="bill-area__bill-value-input bill-box__input" id="bill-value" />
+				<input
+					type="number"
+					autocomplete="off"
+					name="bill-value"
+					placeholder="0"
+					class="bill-area__bill-value-input bill-box__input"
+					id="bill-value" />
+			</div>
+
+			<div class="num-people-area">
+				<span class="num-people-area__error" id="error-msg">Can't be zero</span>
+				<label for="number-of-people" class="bill-box__heading">Number of People</label>
+				<input
+					type="number"
+					autocomplete="off"
+					name="number-of-people"
+					placeholder="0"
+					class="num-people-area__num-people-input bill-box__input"
+					id="number-of-people" />
 			</div>
 
 			<div class="select-tip-area">
 				<p class="bill-box__heading select-tip-area__heading">Select Tip %</p>
 
 				<div class="select-tip-area__btns">
-					<button class="select-tip-area__tip-value-btn">5%</button>
-					<button class="select-tip-area__tip-value-btn">10%</button>
-					<button class="select-tip-area__tip-value-btn">15%</button>
-					<button class="select-tip-area__tip-value-btn">25%</button>
-					<button class="select-tip-area__tip-value-btn">50%</button>
-					<input type="text" placeholder="Custom" class="select-tip-area__tip-value-input" id="custom-tip" />
+					<button value="0.05" class="select-tip-area__tip-value-btn select-tip-value">5%</button>
+					<button value="0.1" class="select-tip-area__tip-value-btn select-tip-value">10%</button>
+					<button value="0.15" class="select-tip-area__tip-value-btn select-tip-value">15%</button>
+					<button value="0.25" class="select-tip-area__tip-value-btn select-tip-value">25%</button>
+					<button value="0.5" class="select-tip-area__tip-value-btn select-tip-value">50%</button>
+					<input type="number" placeholder="Custom" class="select-tip-area__tip-value-input custom-tip-value" />
 				</div>
-			</div>
-
-			<div class="num-people-area">
-				<span class="num-people-area__error">Can't be zero</span>
-				<label for="number-of-people" class="bill-box__heading">Number of People</label>
-				<input type="text" name="number-of-people" placeholder="0" class="num-people-area__num-people-input bill-box__input" id="number-of-people" />
 			</div>
 
 			<div class="final-value-area">
 				<div class="final-value-area__tip-amount">
 					<h3 class="final-value-area__heading">Tip Amount<br /><span class="final-value-area__per-person">/ person</span></h3>
 
-					<p class="final-value-area__value">$<span id="tip-amount">0.00</span></p>
+					<p class="final-value-area__value">$<span id="tip-amount-per-person">0.00</span></p>
 				</div>
 
 				<div class="final-value-area__total">

@@ -93,6 +93,9 @@ body {
 .bill-area__bill-value-input:hover, .bill-area__bill-value-input:focus, .bill-area__bill-value-input:active {
   border-color: rgb(38, 192, 171);
 }
+.bill-area__bill-value-input::-webkit-outer-spin-button, .bill-area__bill-value-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
 
 .select-tip-area__heading {
   margin-bottom: 0.6em;
@@ -116,6 +119,7 @@ body {
 .select-tip-area__tip-value-btn:hover {
   color: rgb(0, 73, 77);
   background-color: rgb(197, 228, 231);
+  cursor: pointer;
 }
 .select-tip-area__tip-value-btn:focus {
   background-color: rgb(38, 192, 171);
@@ -134,6 +138,9 @@ body {
 .select-tip-area__tip-value-input:hover, .select-tip-area__tip-value-input:focus, .select-tip-area__tip-value-input:active {
   border-color: rgb(38, 192, 171);
 }
+.select-tip-area__tip-value-input::-webkit-outer-spin-button, .select-tip-area__tip-value-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
 
 .num-people-area {
   position: relative;
@@ -147,6 +154,9 @@ body {
 }
 .num-people-area__num-people-input:hover, .num-people-area__num-people-input:focus, .num-people-area__num-people-input:active {
   border-color: rgb(38, 192, 171);
+}
+.num-people-area__num-people-input::-webkit-outer-spin-button, .num-people-area__num-people-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 .num-people-area__error {
   position: absolute;
@@ -211,6 +221,11 @@ body {
   display: block;
 }
 
+.unlock-reset {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 @media (min-width: 992px) {
   .bill-box {
     max-width: 80rem;
@@ -228,10 +243,10 @@ body {
     grid-row: 1/2;
   }
   .select-tip-area {
-    grid-row: 2/3;
+    grid-row: 3/4;
   }
   .num-people-area {
-    grid-row: 3/4;
+    grid-row: 2/3;
   }
   .final-value-area {
     grid-column: 2/3;
